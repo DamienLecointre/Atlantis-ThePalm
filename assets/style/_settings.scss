@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// GENERAL SETTINGS 
+
+$paddingSectionBetwwen: 5em 0;
+
+$bgColorPrimary: #FDFFFC;
+$bgColorAccent: #337BD0;
+
+$transition03: 0.3s ease-in-out;
+$transition05: 0.5s ease-in-out;
+$transition08: 0.8s ease-in-out;
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $bgColorPrimary;
+}
+
+.container {
+  @include containerCenter;
+}
+
+// TEXT SETTINGS 
+
+$fontFamilySecondary: "Almarai", sans-serif;
+
+$fontSize16: 1rem;
+$fontSize17: 1.1rem;
+$fontSize19: 1.2rem;
+$fontSize32: 2rem;
+$fontSize48: 3rem;
+
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+
+$lineHeight2: 2em;
+
+$colorPrimary: #FDFFFC;
+$colorSecondary: #1e1e1e;
+$colorAccent: #FF6B35;
+$colorAccentSecondary: #337BD0;
+
+h4 {
+  font-family: $fontFamilySecondary;
+  font-size: $fontSize32;
+  font-weight: $fontWeightMedium;
+  color: $colorAccentSecondary;
+  letter-spacing: 2px;
+}
+
+h6 {
+  font-size: $fontSize16;
+  font-weight: $fontWeightRegular;
+  color: $colorPrimary;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: $fontSize17;
+  font-weight: $fontWeightMedium;
+  line-height: $lineHeight2;
+  color: $colorSecondary;
+
+  &::selection {
+    color: $colorPrimary;
+    background: $bgColorAccent;
+  }
+}
+
+a {
+  font-size: $fontSize16;
+  font-weight: $fontWeightRegular;
+  color: $colorPrimary;
+  cursor: pointer;
+}

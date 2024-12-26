@@ -1,0 +1,58 @@
+#header-section {
+  .container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 1.5em 0;
+  }
+
+  .logo-container {
+    height: 80px;
+    background: url(/assets/images/logo.png) no-repeat left / contain;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    ul {
+      width: 70%;
+      @include flexCenterSpaceBetween;
+    }
+
+    li {
+      position: relative;
+      cursor: pointer;
+
+      &:hover a {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-100%, 0); 
+      }
+
+      &:hover span {
+        opacity: 0;
+        visibility: hidden;       
+      }
+    }
+
+    span {
+      font-size: $fontSize16;
+      font-weight: $fontWeightSemiBold;
+      color: $colorSecondary;
+      transition: $transition05;
+      cursor: pointer;
+    }
+
+    a {
+      position: absolute;
+      font-weight: $fontWeightSemiBold;
+      color: $colorAccentSecondary;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(-20%, -80%);
+      transition: $transition05;
+    }
+  }
+}

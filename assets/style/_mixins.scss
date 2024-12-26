@@ -1,0 +1,16 @@
+@mixin containerCenter {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@mixin flexCenterSpaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

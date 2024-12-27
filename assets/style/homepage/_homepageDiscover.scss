@@ -1,0 +1,58 @@
+#discover-container {
+  .bg-container {
+    background: $bgColorAccent;
+    padding: $paddingSectionBetwwen;
+  }
+
+  .text-container {
+    width: 55%;
+    text-align: center;
+    margin: 0 auto;
+
+    h6 {
+      font-size: $fontSize19;
+      font-weight: $fontWeightSemiBold;
+      color: $colorAccent;
+      padding: 1em 0;
+    }
+
+    p {
+      color: $colorPrimary;
+    }
+
+    button {
+      outline: none;
+      border: 2px solid $bgColorPrimary;
+      font-family: $fontFamilyPrimary;
+      font-size: $fontSize16;
+      font-weight: $fontWeightMedium;
+      color: $colorAccentSecondary;
+      background: $bgColorPrimary;
+      padding: 1em 2em;
+      margin-top: 1em;
+      cursor: pointer;
+      transition: $transition03;
+
+      &:hover {
+        background: $bgColorAccent;
+        color: $colorPrimary;
+        animation: btnHover 1s ease-in-out forwards;
+      }
+
+      @keyframes btnHover {
+        50% {
+          transform: scale(.8);
+        }
+    
+        100% {
+          transform: scale(1.1);
+        }
+      }
+    }
+  } 
+
+  .zoom-in {
+    transform: scale(0);
+    transition: $transition08;
+  }
+}

@@ -5,31 +5,37 @@
 $paddingSectionBetwwen: 5em 0;
 
 $bgColorPrimary: #FDFFFC;
+$bgColorSecondary: #1e1e1e;
 $bgColorAccent: #337BD0;
 
 $transition03: 0.3s ease-in-out;
 $transition05: 0.5s ease-in-out;
 $transition08: 0.8s ease-in-out;
 
-
-body {
-  font-family: "Montserrat", sans-serif;
-  background: $bgColorPrimary;
-}
-
 .container {
   @include containerCenter;
 }
 
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.2);
+  }
+}
+
 // TEXT SETTINGS 
 
+$fontFamilyPrimary: "Montserrat", sans-serif;
 $fontFamilySecondary: "Almarai", sans-serif;
 
 $fontSize16: 1rem;
 $fontSize17: 1.1rem;
 $fontSize19: 1.2rem;
+$fontSize24: 1.5rem;
 $fontSize32: 2rem;
 $fontSize48: 3rem;
+$fontSize64: 4rem;
 
 $fontWeightRegular: 400;
 $fontWeightMedium: 500;
@@ -39,8 +45,21 @@ $lineHeight2: 2em;
 
 $colorPrimary: #FDFFFC;
 $colorSecondary: #1e1e1e;
+$colorSecondaryMedium: #696A88;
 $colorAccent: #FF6B35;
 $colorAccentSecondary: #337BD0;
+
+body {
+  font-family: $fontFamilyPrimary;
+  background: $bgColorPrimary;
+}
+
+h3 {
+  font-family: $fontFamilySecondary;
+  font-size: $fontSize48;
+  font-weight: $fontWeightMedium;
+  color: $colorPrimary;
+}
 
 h4 {
   font-family: $fontFamilySecondary;

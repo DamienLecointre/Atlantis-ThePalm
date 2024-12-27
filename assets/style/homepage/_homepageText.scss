@@ -1,0 +1,17 @@
+#text-container {
+  .container {
+    margin-bottom: 5em;
+  }
+  i {
+    display: block;
+    font-size: $fontSize64;
+    color: $colorSecondaryMedium;
+    text-align: center;
+    padding-bottom: 1em;
+  }
+
+  p {
+    font-size: $fontSize24;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,41 @@
+#copyright-container {
+
+  .bg-container {
+    background: $bgColorAccentSecondary;
+    padding: 1.5em 0;
+  }
+
+  .copyright-zoom-in {
+    @include flexCenter;
+    transform: scale(0);
+    transition: $transition08;
+  }
+
+  p {
+    color: $colorPrimary;
+    text-align: center;
+    padding-right: .5em;
+  }
+
+  a {
+    position: relative;
+    font-weight: $fontWeightSemiBold;
+    color: $colorPrimary;
+    cursor: pointer;
+    transition: $transition05;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &::after {
+      @include underline;
+      background: $colorPrimary;
+      transition: $transition05;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

@@ -49,24 +49,6 @@
     position: relative;
     cursor: pointer;
 
-    &::after {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background: rgba(30, 30, 30, 0.7);
-      z-index: 100;
-      left: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: $transition05;
-    }
-
-    &:hover::after {
-      opacity: 1;
-      visibility: visible;
-    }
-
     &:hover i {
       opacity: 1;
       visibility: visible;

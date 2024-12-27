@@ -2,10 +2,7 @@
 
   .bg-container {
     background: url(/assets/images/bann.jpg) no-repeat center/cover;
-    padding-left: calc((100% - 80%) /2);
-    padding-right: calc((100% - 80%) /2);
-    padding-top: 5em;
-    padding-bottom: 5em;
+    @include bgContainerCenter;
   }
 
   .statistic-zoom-in {

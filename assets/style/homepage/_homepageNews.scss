@@ -1,0 +1,90 @@
+#news-container {
+  padding: $paddingSectionBetwwen;
+
+  .slide-right {
+    transform: translateX(-120%);
+    transition: $transition08;
+  }
+
+  h3 {
+    color: $colorAccentSecondary;
+    text-align: center;
+    padding-bottom: .8em;
+  }
+
+  .img-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+    
+  .room-card {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: $bgColorSecondary;
+        z-index: -100;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0;
+        background: $bgColorPrimary;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: $transition05;
+        z-index: 500;
+      }
+
+      &:hover img {
+        opacity: 40%;
+      }
+
+      &:hover::after {
+        width: 80%;
+      }
+
+      &:hover .slide-top {
+          transform: translate(-50%, 450%);
+      }
+
+      &:hover .slide-bottom {
+          transform: translate(-50%, -580%);
+      }
+
+      .slide-top,
+      .slide-bottom {
+          position: absolute;
+          left: 50%;  
+          text-wrap: nowrap;
+          transition: $transition05; 
+          z-index: 500;
+      }
+
+      .slide-top {
+       font-weight: $fontWeightSemiBold;
+        text-transform: uppercase;
+        transform: translate(-50%, -100%);
+      }
+
+      .slide-bottom {
+        transform: translate(-50%, -20%);
+      }
+
+      img {
+          height: 100%;
+          width: 100%;
+          transition: $transition05; 
+      }
+  }   
+}

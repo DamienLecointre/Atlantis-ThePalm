@@ -7,22 +7,11 @@ $paddingSectionBetwwen: 5em 0;
 $bgColorPrimary: #FDFFFC;
 $bgColorSecondary: #1e1e1e;
 $bgColorAccent: #337BD0;
+$bgColorAccentSecondary: #FF6B35;
 
 $transition03: 0.3s ease-in-out;
 $transition05: 0.5s ease-in-out;
 $transition08: 0.8s ease-in-out;
-
-.container {
-  @include containerCenter;
-}
-
-@keyframes zoomIn {
-  to {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.2);
-  }
-}
 
 // TEXT SETTINGS 
 
@@ -52,6 +41,18 @@ $colorAccentSecondary: #337BD0;
 body {
   font-family: $fontFamilyPrimary;
   background: $bgColorPrimary;
+}
+
+.container {
+  @include containerCenter;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.2);
+  }
 }
 
 h3 {
@@ -93,4 +94,24 @@ a {
   font-weight: $fontWeightRegular;
   color: $colorPrimary;
   cursor: pointer;
+}
+
+.hover {
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.7);
+    z-index: 100;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition05;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }

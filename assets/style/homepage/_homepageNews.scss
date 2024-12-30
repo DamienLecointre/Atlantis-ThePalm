@@ -3,13 +3,13 @@
 
   .slide-right {
     transform: translateX(-120%);
-    transition: $transition08;
+    transition: $transition20;
   }
 
   h3 {
     color: $colorAccentSecondary;
     text-align: center;
-    padding-bottom: .8em;
+    padding-bottom: $paddingLittleSpace;
   }
 
   .img-container {
@@ -35,13 +35,10 @@
 
       &::after {
         content: "";
-        position: absolute;
         height: 2px;
         width: 0;
         background: $bgColorPrimary;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        @include element-position (50%, 0, 0, 50%, -50%, -50%);
         transition: $transition05;
         z-index: 500;
       }
@@ -72,7 +69,7 @@
       }
 
       .slide-top {
-       font-weight: $fontWeightSemiBold;
+        font-weight: $fontWeightSemiBold;
         text-transform: uppercase;
         transform: translate(-50%, -100%);
       }

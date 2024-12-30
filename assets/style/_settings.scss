@@ -3,6 +3,7 @@
 // GENERAL SETTINGS 
 
 $paddingSectionBetwwen: 5em 0;
+$paddingLittleSpace: 1em;
 
 $bgColorPrimary: #FDFFFC;
 $bgColorSecondary: #1e1e1e;
@@ -11,7 +12,7 @@ $bgColorAccentSecondary: #FF6B35;
 
 $transition03: 0.3s ease-in-out;
 $transition05: 0.5s ease-in-out;
-$transition08: 0.8s ease-in-out;
+$transition20: 2s ease-in-out;
 
 // TEXT SETTINGS 
 
@@ -23,6 +24,7 @@ $fontSize17: 1.1rem;
 $fontSize19: 1.2rem;
 $fontSize24: 1.5rem;
 $fontSize32: 2rem;
+$fontSize40: 2.5rem;
 $fontSize48: 3rem;
 $fontSize64: 4rem;
 
@@ -38,13 +40,15 @@ $colorSecondaryMedium: #696A88;
 $colorAccent: #FF6B35;
 $colorAccentSecondary: #337BD0;
 
+// GENERAL ELEMENTS SETTINGS 
+
 body {
   font-family: $fontFamilyPrimary;
   background: $bgColorPrimary;
 }
 
 .container {
-  @include containerCenter;
+  @extend %container-center;
 }
 
 @keyframes zoomIn {
@@ -55,25 +59,31 @@ body {
   }
 }
 
-h3 {
+h3,
+h4 {
   font-family: $fontFamilySecondary;
-  font-size: $fontSize48;
   font-weight: $fontWeightMedium;
+}
+
+h3 {
+  font-size: $fontSize48;
   color: $colorPrimary;
 }
 
 h4 {
-  font-family: $fontFamilySecondary;
   font-size: $fontSize32;
-  font-weight: $fontWeightMedium;
   color: $colorAccentSecondary;
   letter-spacing: 2px;
 }
 
-h6 {
+h6,
+a {
+  color: $colorPrimary;
   font-size: $fontSize16;
   font-weight: $fontWeightRegular;
-  color: $colorPrimary;
+}
+
+h6 {
   letter-spacing: 2px;
 }
 
@@ -90,9 +100,6 @@ p {
 }
 
 a {
-  font-size: $fontSize16;
-  font-weight: $fontWeightRegular;
-  color: $colorPrimary;
   cursor: pointer;
 }
 

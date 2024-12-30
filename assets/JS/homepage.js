@@ -21,27 +21,27 @@ window.addEventListener("scroll", () => {
     translateRight.style.transform = "translateX(-150%)";
     translateLeft.style.transform = "translateX(150%)";
   }
-  if (window.scrollY > 1000) {
+  if (window.scrollY > 800) {
     textContainer.style.transform = "scale(1)";
   } else {
     textContainer.style.transform = "scale(0)";
   }
-  if (window.scrollY > 1430) {
+  if (window.scrollY > 1100) {
     branchesContainer.style.transform = "scale(1)";
   } else {
     branchesContainer.style.transform = "scale(0)";
   }
-  if (window.scrollY > 2700) {
+  if (window.scrollY > 2200) {
     statisticContainer.style.transform = "scale(1)";
   } else {
     statisticContainer.style.transform = "scale(0)";
   }
-  if (window.scrollY > 3000) {
+  if (window.scrollY > 2700) {
     slideContainerRight.style.transform = "translateX(0)";
   } else {
     slideContainerRight.style.transform = "translateX(-120%)";
   }
-  if (window.scrollY > 3500) {
+  if (window.scrollY > 3100) {
     contactContainer1.style.transform = "scale(1)";
     contactContainer2.style.transform = "scale(1)";
     contactContainer3.style.transform = "scale(1)";

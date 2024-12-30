@@ -4,11 +4,11 @@
     display: grid;
     grid-template-columns: 25% 65%;
     justify-content: space-between;
-    padding: 1em 0;
+    padding: $paddingLittleSpace 0;
   }
 
   .social-container {
-    @include flexCenterSpaceBetween;
+    @extend %flex-between;
     transform: translateX(-200%);
     animation: social-slide 2s ease forwards;
 
@@ -41,7 +41,7 @@
       transform: translateY(-200%);
     }
 
-    .hover {
+    .hover-social {
       position: absolute;
       left: 0;
       transform: translateY(100%);
@@ -49,15 +49,13 @@
       transition: $transition03;
     }
 
-    &:hover .hover {
+    &:hover .hover-social {
       transform: translateY(0);
     }
   }
 
   .contact-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @extend %flex-end;
     font-size: $fontSize16;
     color: $colorPrimary;
     transform: translateX(200%);
@@ -86,12 +84,13 @@
     }
 
     i {
-      padding: 0 1em;
+      padding: 0 $paddingLittleSpace;
     }
 
     a {
       transition: $transition03;
       &:hover {
+        font-weight: $fontWeightSemiBold;
         color: $colorAccent;
         transform: scale(1.05);
       }

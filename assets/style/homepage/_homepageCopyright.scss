@@ -6,9 +6,9 @@
   }
 
   .copyright-zoom-in {
-    @include flexCenter;
+    @extend %flex-center;
     transform: scale(0);
-    transition: $transition08;
+    transition: $transition20;
   }
 
   p {
@@ -29,7 +29,7 @@
     }
 
     &::after {
-      @include underline;
+      @extend %underline;
       background: $colorPrimary;
       transition: $transition05;
     }

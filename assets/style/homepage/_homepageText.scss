@@ -2,12 +2,13 @@
   .container {
     margin-bottom: 5em;
   }
+  
   i {
     display: block;
     font-size: $fontSize64;
     color: $bgColorAccent;
     text-align: center;
-    padding-bottom: 1em;
+    padding-bottom: $paddingLittleSpace;
   }
 
   p {

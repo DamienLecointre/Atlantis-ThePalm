@@ -8,7 +8,7 @@
 
   .text-container {
     width: 50%;
-    @include flexCenter;
+    @extend %flex-center;
     flex-direction: column;
     background: rgba(235, 235, 235, 0.8);
     padding: 100px;

@@ -16,19 +16,18 @@
 
   .translate-right {
     transform: translateX(-150%);
-    transition: $transition08;
+    transition: $transition20;
   }
 
   .translate-left {
     transform: translateX(150%);
-    transition: $transition08;
-    transition-delay: .5s;
+    transition: $transition20;
   }
 
   .services-wrapper {
     display: grid;
     grid-template-columns: 15% 85%;
-    padding: 0 .9em;
+    padding: 0 $paddingLittleSpace;
     .icon1 {
       background: url(/assets/images/s1.png) no-repeat top/contain;
       position: relative;
@@ -52,13 +51,12 @@
   }
 
   .text-container {
-    padding-left: 0.8em;
+    padding-left: $paddingLittleSpace;
 
     p {
       font-size: $fontSize16;
       font-weight: $fontWeightRegular;
-      padding-top: .8em;
+      padding-top: $paddingLittleSpace;
     }
   }
-
 }

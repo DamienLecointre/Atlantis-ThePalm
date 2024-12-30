@@ -2,13 +2,13 @@
   h3 {
     color: $colorAccentSecondary;
     text-align: center;
-    padding-bottom: .8em;
+    padding-bottom: $paddingLittleSpace;
   }
 
   .branches-wrapper {
     padding: $paddingSectionBetwwen;
     transform: scale(0);
-    transition: $transition08; 
+    transition: $transition20; 
   }
 
   .img-container {
@@ -61,15 +61,12 @@
   }
 
   i {
-    position: absolute;
     height: 60px;
     width: 60px;
     font-size: $fontSize32;
     color: $colorPrimary;
     text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include element-position(50%, 0, 0, 50%, -50%, -50%);
     border-radius: 150px;
     border: 5px solid $bgColorPrimary;
     z-index: 500;
@@ -80,9 +77,7 @@
 
     &::before {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include element-position(50%, 0, 0, 50%, -50%, -50%);
     }
   }
 }

@@ -1,7 +1,7 @@
 #header-section {
   .container {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 10% 90%;
     padding: 1.5em 0;
   }
 
@@ -12,13 +12,11 @@
 
   nav {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @extend %flex-end;
 
     ul {
       width: 70%;
-      @include flexCenterSpaceBetween;
+      @extend %flex-between;
     }
 
     li {

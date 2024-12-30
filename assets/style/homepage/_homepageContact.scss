@@ -5,7 +5,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, 1fr);
     background: $bgColorAccent;
-    @include bgContainerCenter;
+    @extend %bg-container-center;
     gap: 1.2em;
   }
 
@@ -14,7 +14,7 @@
   .contact-zoom-in3,
   .contact-zoom-in4 {
     transform: scale(0);
-    transition: $transition08;
+    transition: $transition20;
   }
 
   .logo-container {
@@ -49,7 +49,7 @@
     }
 
     &::after {
-      @include underline;
+      @extend %underline;
       background: $bgColorAccentSecondary;
       transition: $transition05;
     }
@@ -60,11 +60,12 @@
   }
 
   h3 {
+    font-size: $fontSize40;
     margin-bottom: .5em;
   }
 
   form {
-    @include flexCenterSpaceBetween;
+    @extend %flex-between;
     gap: .5em;
   }
 
@@ -100,7 +101,7 @@
 
   .social-container {
     width: 75%;
-    @include flexCenterSpaceBetween;
+    @extend %flex-between;
     padding-top: 1.5em;
 
     i {
@@ -133,7 +134,7 @@
     }
 
     &::after {
-      @include underline;
+      @extend %underline;
       background: $bgColorAccentSecondary;
       transition: $transition05;
     }

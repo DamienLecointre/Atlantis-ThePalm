@@ -9,6 +9,10 @@
     @extend %flex-center;
     transform: scale(0);
     transition: $transition20;
+
+    @media only screen and (max-width: 400px) {
+      display: block;
+    }
   }
 
   p {
@@ -23,6 +27,11 @@
     color: $colorPrimary;
     cursor: pointer;
     transition: $transition05;
+
+    @media only screen and (max-width: 400px) {
+      display: block;
+      text-align: center;
+    }
 
     &:hover {
       transform: scale(1.05);

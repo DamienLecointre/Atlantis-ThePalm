@@ -3,6 +3,11 @@
   .bg-container {
     background: url(/assets/images/bann.jpg) no-repeat center/cover;
     @extend %bg-container-center;
+
+    @media only screen and (max-width: 400px) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
   }
 
   .statistic-zoom-in {
@@ -31,6 +36,14 @@
       font-size: $fontSize24;
       font-weight: $fontWeightMedium;
       color: $colorPrimary;
+      
+      @media only screen and (max-width: 1000px) {
+        font-size: $fontSize17;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: $fontSize12;
+      }
     }
 
     p {
@@ -42,6 +55,11 @@
     height: 60px;
     width: 60px;
     margin: 1.5em 0;
+
+    @media only screen and (max-width: 600px) {
+      height: 40px;
+      width: 40px;
+    }
   }
 
   .img1 {

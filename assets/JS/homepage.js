@@ -1,5 +1,10 @@
 const translateRight = document.querySelector(".translate-right");
 const translateLeft = document.querySelector(".translate-left");
+const burgerMenu = document.querySelector(".burger-menu");
+const lineTop = document.querySelector(".line-top");
+const lineMiddle = document.querySelector(".line-middle");
+const lineBottom = document.querySelector(".line-bottom");
+const burgerMenuNav = document.querySelector(".burger-menu-nav");
 const textContainer = document.querySelector(".zoom-in");
 const branchesContainer = document.querySelector(".branches-wrapper");
 const statisticContainer = document.querySelector(".statistic-zoom-in");
@@ -10,7 +15,7 @@ const contactContainer3 = document.querySelector(".contact-zoom-in3");
 const contactContainer4 = document.querySelector(".contact-zoom-in4");
 const copyrightContainer = document.querySelector(".copyright-zoom-in");
 
-// console.log(copyrightContainer);
+console.log(lineBottom);
 
 window.addEventListener("scroll", () => {
   // console.log(window.scrollY);
@@ -54,4 +59,12 @@ window.addEventListener("scroll", () => {
     contactContainer4.style.transform = "scale(0)";
     copyrightContainer.style.transform = "scale(0)";
   }
+});
+
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("active");
+  lineTop.classList.toggle("active");
+  lineMiddle.classList.toggle("active");
+  lineBottom.classList.toggle("active");
+  burgerMenuNav.classList.toggle("show");
 });

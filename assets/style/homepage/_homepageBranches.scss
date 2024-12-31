@@ -9,6 +9,10 @@
     padding: $paddingSectionBetwwen;
     transform: scale(0);
     transition: $transition20; 
+
+    @media only screen and (max-width: 400px) {
+      padding: $paddingBetwwenResponsive;
+    }
   }
 
   .img-container {
@@ -18,7 +22,15 @@
     grid-template-areas: 
     "b6 b1 b3 b5"
     "b6 b2 b4 b5";
-    gap: .5em;   
+    gap: .5em;  
+    
+    @media only screen and (max-width: 860px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "b1 b3"
+      "b2 b4"
+      "b6 b5";
+    }
   }
 
   .img1 {
@@ -77,7 +89,7 @@
 
     &::before {
       position: absolute;
-      @include element-position(50%, 0, 0, 50%, -50%, -50%);
+      @include element-position(50%, -5px, -5px, 50%, -50%, -50%);
     }
   }
 }

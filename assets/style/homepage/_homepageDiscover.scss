@@ -2,12 +2,20 @@
   .bg-container {
     background: $bgColorAccent;
     padding: $paddingSectionBetwwen;
+
+    @media only screen and (max-width: 400px) {
+      padding: $paddingBetwwenResponsive;
+    }
   }
 
   .text-container {
     width: 55%;
     text-align: center;
     margin: 0 auto;
+
+    @media only screen and (max-width: 1000px) {
+      width: 80%;
+    }
 
     h6 {
       font-size: $fontSize19;

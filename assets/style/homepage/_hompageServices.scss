@@ -6,12 +6,27 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 4em;
     padding: $paddingSectionBetwwen;
+    overflow: visible;
+
+    @media only screen and (max-width: 400px) {
+      gap: 1em;
+      padding: $paddingBetwwenResponsive;
+    }
   }
 
   .services-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+
+    @media only screen and (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      gap: 3em;
+    }
+
+    @media only screen and (max-width: 400px) {
+      gap: 1em;
+    }
   }
 
   .translate-right {
@@ -31,7 +46,6 @@
     .icon1 {
       background: url(/assets/images/s1.png) no-repeat top/contain;
       position: relative;
-      top: -10px;
     }
     .icon2 {
       background: url(/assets/images/s2.png) no-repeat top/contain;

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// GENERAL SETTINGS 
+
+$paddingSectionBetwwen: 5em 0;
+$paddingBetwwenResponsive: 3em 0;
+$paddingLittleSpace: 1em;
+
+$bgColorPrimary: #FDFFFC;
+$bgColorSecondary: #1e1e1e;
+$bgColorAccent: #337BD0;
+$bgColorAccentSecondary: #FF6B35;
+
+$transition03: 0.3s ease-in-out;
+$transition05: 0.5s ease-in-out;
+$transition20: 2s ease-in-out;
+
+// TEXT SETTINGS 
+
+$fontFamilyPrimary: "Montserrat", sans-serif;
+$fontFamilySecondary: "Almarai", sans-serif;
+
+$fontSize12: 0.8rem;
+$fontSize16: 1rem;
+$fontSize17: 1.1rem;
+$fontSize19: 1.2rem;
+$fontSize24: 1.5rem;
+$fontSize32: 2rem;
+$fontSize40: 2.5rem;
+$fontSize48: 3rem;
+$fontSize64: 4rem;
+
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightSemiBold: 600;
+
+$lineHeight2: 2em;
+
+$colorPrimary: #FDFFFC;
+$colorSecondary: #1e1e1e;
+$colorSecondaryMedium: #696A88;
+$colorAccent: #FF6B35;
+$colorAccentSecondary: #337BD0;
+
+// GENERAL ELEMENTS SETTINGS 
+
+body {
+  width: 100%;
+  font-family: $fontFamilyPrimary;
+  background: $bgColorPrimary;
+}
+
+.container {
+  @extend %container-center;
+  overflow: hidden;
+
+  @media only screen and (max-width: 1000px) {
+    width: 90%;
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.2);
+  }
+}
+
+h3,
+h4 {
+  font-family: $fontFamilySecondary;
+  font-weight: $fontWeightMedium;
+}
+
+h3 {
+  font-size: $fontSize48;
+  color: $colorPrimary;
+
+  @media only screen and (max-width: 600px) {
+    font-size: $fontSize32;
+  }
+}
+
+h4 {
+  font-size: $fontSize32;
+  color: $colorAccentSecondary;
+  letter-spacing: 2px;
+}
+
+h6,
+a {
+  color: $colorPrimary;
+  font-size: $fontSize16;
+  font-weight: $fontWeightRegular;
+}
+
+h6 {
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: $fontSize17;
+  font-weight: $fontWeightMedium;
+  line-height: $lineHeight2;
+  color: $colorSecondary;
+
+  @media only screen and (max-width: 1100px) {
+    font-size: $fontSize12;
+  }
+
+  &::selection {
+    color: $colorPrimary;
+    background: $bgColorAccent;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+.hover {
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.7);
+    z-index: 100;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition05;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

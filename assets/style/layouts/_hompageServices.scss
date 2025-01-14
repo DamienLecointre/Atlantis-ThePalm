@@ -1,0 +1,76 @@
+#services-section {
+  overflow: hidden;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4em;
+    padding: $paddingSectionBetwwen;
+    overflow: visible;
+
+    @media only screen and (max-width: 400px) {
+      gap: 1em;
+      padding: $paddingBetwwenResponsive;
+    }
+  }
+
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    @media only screen and (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      gap: 3em;
+    }
+
+    @media only screen and (max-width: 400px) {
+      gap: 1em;
+    }
+  }
+
+  .translate-right {
+    transform: translateX(-150%);
+    transition: $transition20;
+  }
+
+  .translate-left {
+    transform: translateX(150%);
+    transition: $transition20;
+  }
+
+  .services-wrapper {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 $paddingLittleSpace;
+    .icon1 {
+      background: url(../../assets/images/s1.png) no-repeat top/contain;
+      position: relative;
+    }
+    .icon2 {
+      background: url(../../assets/images/s2.png) no-repeat top/contain;
+    }
+    .icon3 {
+      background: url(../../assets/images/s4.png) no-repeat top/contain;
+    }
+    .icon4 {
+      background: url(../../assets/images/s3.png) no-repeat top/contain;
+    }
+    .icon5 {
+      background: url(../../assets/images/s5.png) no-repeat top/contain;
+    }
+    .icon6 {
+      background: url(../../assets/images/s6.png) no-repeat top/contain;
+    }
+  }
+
+  .text-container {
+    padding-left: $paddingLittleSpace;
+
+    p {
+      font-size: $fontSize16;
+      font-weight: $fontWeightRegular;
+      padding-top: $paddingLittleSpace;
+    }
+  }
+}

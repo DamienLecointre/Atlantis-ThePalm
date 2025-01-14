@@ -1,0 +1,189 @@
+#contact-container {
+
+  .bg-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    background: $bgColorAccent;
+    @extend %bg-container-center;
+    gap: 1.2em;
+
+    @media only screen and (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contact-zoom-in1,
+  .contact-zoom-in2,
+  .contact-zoom-in3,
+  .contact-zoom-in4 {
+    transform: scale(0);
+    transition: $transition20;
+  }
+
+  .contact-zoom-in2,
+  .contact-zoom-in4 {
+    @media only screen and (max-width: 1000px) {
+      text-align: left;
+    }
+  }
+
+  .logo-container {
+    height: 50px;
+    width: 100%;
+    background: url(../../assets/images/logo_white.webp) no-repeat left/ contain;
+    margin-bottom: 1.6em;
+  }
+
+  p {
+    color: $colorPrimary;
+  }
+
+  button {
+    font-family: $fontFamilyPrimary;
+    font-size: $fontSize16;
+    font-weight: $fontWeightSemiBold;
+    cursor: pointer;
+  }
+
+  button[type="button"] {
+    position: relative;
+    color: $colorAccent;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 1em;
+    transition: $transition05;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &::after {
+      @extend %underline;
+      background: $bgColorAccentSecondary;
+      transition: $transition05;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    font-size: $fontSize40;
+    margin-bottom: .5em;
+    text-wrap: nowrap;
+
+    @media only screen and (max-width: 1100px) {
+      font-size: $fontSize32;
+    }
+
+    @media only screen and (max-width: 400px) {
+      font-size: $fontSize24;
+    }
+  }
+
+  form {
+    @extend %flex-between;
+    gap: .5em;
+  }
+
+  input {
+    width: 90%;
+    font-family: $fontFamilyPrimary;
+    font-size: $fontSize16;
+    font-weight: $fontWeightMedium;
+    color: $colorAccent;
+    outline: none;
+    border: 3px solid $bgColorPrimary;
+    padding: .3em .6em;
+
+    &:focus {
+      border: 3px solid $bgColorAccentSecondary;
+    }
+
+    &::placeholder {
+      color: $colorSecondaryMedium;
+    }
+  }
+
+  button[type="submit"] {
+    color: $colorPrimary;
+    background: $colorAccent;
+    border: 3px solid $bgColorAccentSecondary;
+    padding: .3em .6em;
+    transition: $transition03;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .social-container {
+    width: 75%;
+    @extend %flex-between;
+    padding-top: 1.5em;
+
+    i {
+      font-size: $fontSize24;
+      color: $colorPrimary;
+      cursor: pointer;
+      transition: $transition03;
+
+      @media only screen and (max-width: 1100px) {
+        font-size: $fontSize16;
+      }
+
+      &:hover {
+        color: $colorAccent;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  ul {
+    height: 65%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1100px) {
+      height: 100%;
+    }
+  }
+
+  li {
+    position: relative;
+    width: fit-content;
+    transition: $transition05;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &::after {
+      @extend %underline;
+      background: $bgColorAccentSecondary;
+      transition: $transition05;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  a {
+    font-weight: $fontWeightSemiBold;
+    transition: $transition03;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: $fontSize12;
+    }
+
+
+    &:hover {
+      color: $colorAccent;
+    }
+  }
+}

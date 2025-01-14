@@ -1,0 +1,82 @@
+#hero-section {
+  .banner-container {
+    height: 100%;
+    width: 100%;
+    background: url(../../assets/images/banner.jpg) no-repeat center/cover;
+    padding: 120px 0;
+  }
+
+  .text-container-bg {
+    width: 50%;
+    background: rgba(235, 235, 235, 0.8);
+    margin: 0 auto;
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+    animation: zoomIn 3s ease-in-out forwards;
+    transition: $transition05;
+    
+    @media only screen and (max-width: 1000px) {
+      width: 70%;
+    }
+  }
+
+  .text-container {
+    width: 80%;
+    @extend %flex-center;
+    flex-direction: column;
+    padding: 80px 0;
+    margin: auto;
+
+    @media only screen and (max-width: 400px) {
+      padding: 40px 0;
+    }
+  }
+
+  h1 {
+    font-family: $fontFamilySecondary;
+    font-size: $fontSize48;
+    font-weight: $fontWeightMedium;
+    color: $colorSecondary;
+    letter-spacing: 3px;
+    text-wrap: nowrap;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: $fontSize40;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: $fontSize32;
+    }
+
+    @media only screen and (max-width: 400px) {
+      font-size: $fontSize19;
+    }
+  }
+
+  h2 {
+    font-size: $fontSize32;
+    font-weight: $fontWeightRegular;
+    color: $colorSecondary;
+    padding: 30px 0;
+    text-wrap: nowrap;
+
+    @media only screen and (max-width: 1000px) {
+      font-size: $fontSize24;
+    }
+
+    @media only screen and (max-width: 400px) {
+      font-size: $fontSize16;
+    }
+  }
+
+  p {
+    @media only screen and (max-width: 1000px) {
+      font-size: $fontSize12;
+    }
+
+    @media only screen and (max-width: 400px) {
+      font-weight: $fontWeightRegular;
+    }
+  }
+}

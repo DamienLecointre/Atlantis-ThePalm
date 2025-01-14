@@ -1,0 +1,80 @@
+#statistic-section {
+
+  .bg-container {
+    background: url(../../assets/images/bann.jpg) no-repeat center/cover;
+    @extend %bg-container-center;
+
+    @media only screen and (max-width: 400px) {
+      padding-top: 3em;
+      padding-bottom: 3em;
+    }
+  }
+
+  .statistic-zoom-in {
+    transform: scale(0);
+    transition: $transition20;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .text-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 3em;
+  }
+
+  .text-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    h5,
+    p {
+      font-size: $fontSize24;
+      font-weight: $fontWeightMedium;
+      color: $colorPrimary;
+      
+      @media only screen and (max-width: 1000px) {
+        font-size: $fontSize17;
+      }
+
+      @media only screen and (max-width: 600px) {
+        font-size: $fontSize12;
+      }
+    }
+
+    p {
+      line-height: 15px;
+    }
+  }
+
+  .img {
+    height: 60px;
+    width: 60px;
+    margin: 1.5em 0;
+
+    @media only screen and (max-width: 600px) {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .img1 {
+    background: url(../../assets/images/s7.png) no-repeat center/contain;
+  }
+
+  .img2 {
+    background: url(../../assets/images/s8.png) no-repeat center/contain;
+  }
+
+  .img3 {
+    background: url(../../assets/images/s9.png) no-repeat center/contain;
+  }
+
+  .img4 {
+    background: url(../../assets/images/s10.png) no-repeat center/contain;
+  }
+}

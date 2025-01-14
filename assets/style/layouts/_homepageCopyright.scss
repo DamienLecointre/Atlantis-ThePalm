@@ -1,0 +1,50 @@
+#copyright-container {
+
+  .bg-container {
+    background: $bgColorAccentSecondary;
+    padding: 1.5em 0;
+  }
+
+  .copyright-zoom-in {
+    @extend %flex-center;
+    transform: scale(0);
+    transition: $transition20;
+
+    @media only screen and (max-width: 400px) {
+      display: block;
+    }
+  }
+
+  p {
+    color: $colorPrimary;
+    text-align: center;
+    padding-right: .5em;
+  }
+
+  a {
+    position: relative;
+    font-weight: $fontWeightSemiBold;
+    color: $colorPrimary;
+    cursor: pointer;
+    transition: $transition05;
+
+    @media only screen and (max-width: 400px) {
+      display: block;
+      text-align: center;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &::after {
+      @extend %underline;
+      background: $colorPrimary;
+      transition: $transition05;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

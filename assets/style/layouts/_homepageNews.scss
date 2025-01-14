@@ -1,0 +1,112 @@
+#news-container {
+  padding: $paddingSectionBetwwen;
+
+  @media only screen and (max-width: 400px) {
+    padding: $paddingBetwwenResponsive;
+  }
+
+  .slide-right {
+    transform: translateX(-120%);
+    transition: $transition20;
+  }
+
+  h3 {
+    color: $colorAccentSecondary;
+    text-align: center;
+    padding-bottom: $paddingLittleSpace;
+  }
+
+  .img-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+
+    @media only screen and (max-width: 1000px) {
+      gap: .8em;
+    }
+
+    @media only screen and (max-width: 860px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+    
+  .room-card {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: $bgColorSecondary;
+        z-index: -100;
+      }
+
+      &::after {
+        content: "";
+        height: 2px;
+        width: 0;
+        background: $bgColorPrimary;
+        @include element-position (50%, 0, 0, 50%, -50%, -50%);
+        transition: $transition05;
+        z-index: 500;
+      }
+
+      &:hover img {
+        opacity: 40%;
+      }
+
+      &:hover::after {
+        width: 80%;
+      }
+
+      &:hover .slide-top {
+        top: 35%;
+        transform: translate(-50%, 0);
+      }
+
+      &:hover .slide-bottom {
+        bottom: 35%;
+        transform: translate(-50%, 0);
+      }
+
+      .slide-top,
+      .slide-bottom {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);  
+          text-wrap: nowrap;
+          transition: $transition05; 
+          z-index: 500;
+
+          @media screen and (max-width: 1200px) {
+            font-size: $fontSize12;
+          }   
+        }
+
+      .slide-top {
+        font-weight: $fontWeightSemiBold;
+        text-transform: uppercase;
+        top: 0;
+        transform: translate(-50%, -100%);
+      }
+
+      .slide-bottom {
+        bottom: 0;
+        transform: translate(-50%, 100%);
+      }
+
+      img {
+          height: 100%;
+          width: 100%;
+          transition: $transition05; 
+      }
+  }   
+}

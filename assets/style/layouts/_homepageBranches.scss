@@ -1,0 +1,95 @@
+#branches-container {
+  h3 {
+    color: $colorAccentSecondary;
+    text-align: center;
+    padding-bottom: $paddingLittleSpace;
+  }
+
+  .branches-wrapper {
+    padding: $paddingSectionBetwwen;
+    transform: scale(0);
+    transition: $transition20; 
+
+    @media only screen and (max-width: 400px) {
+      padding: $paddingBetwwenResponsive;
+    }
+  }
+
+  .img-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "b6 b1 b3 b5"
+    "b6 b2 b4 b5";
+    gap: .5em;  
+    
+    @media only screen and (max-width: 860px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "b1 b3"
+      "b2 b4"
+      "b6 b5";
+    }
+  }
+
+  .img1 {
+    grid-area: b6;
+  }
+
+  .img2 {
+    grid-area: b1;
+  }
+
+  .img3 {
+    grid-area: b3;
+  }
+
+  .img4 {
+    grid-area: b5;
+  }
+
+  .img5 {
+    grid-area: b2;
+  }
+
+  .img6 {
+    grid-area: b4;
+  }
+
+  a {
+    position: relative;
+    cursor: pointer;
+
+    &:hover i {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  i {
+    height: 60px;
+    width: 60px;
+    font-size: $fontSize32;
+    color: $colorPrimary;
+    text-align: center;
+    @include element-position(50%, 0, 0, 50%, -50%, -50%);
+    border-radius: 150px;
+    border: 5px solid $bgColorPrimary;
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition05;
+
+
+    &::before {
+      position: absolute;
+      @include element-position(50%, -5px, -5px, 50%, -50%, -50%);
+    }
+  }
+}

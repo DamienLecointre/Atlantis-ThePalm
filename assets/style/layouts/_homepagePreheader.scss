@@ -1,0 +1,137 @@
+#preheader-section {
+  background: $bgColorAccent;
+  .container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    justify-content: space-between;
+    padding: $paddingLittleSpace 0;
+
+    @media only screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+      gap: $paddingLittleSpace;
+    }
+  }
+
+  .social-container {
+    width: 100%;
+    @extend %flex-between;
+    transform: translateX(-200%);
+    animation: social-slide 2s ease forwards;
+
+    @keyframes social-slide {
+      30% {
+        transform: translateX(100px);
+      }
+      60% {
+        transform: translateX(-100px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @media only screen and (max-width: 1000px) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 500px) {
+      align-items: center;
+    }
+
+    h6 {
+      text-wrap: nowrap;
+      margin-right: $paddingLittleSpace;
+    }
+  }
+
+  .social-icon-container {
+    width: 100%;
+    @extend %flex-between;
+
+    @media only screen and (max-width: 500px) {
+      width: 80%;
+    }
+  }
+
+  .social-wrapper {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    >a {
+      position: absolute;
+      transition: $transition03;
+    }
+
+    &:hover >a{
+      transform: translateY(-200%);
+    }
+
+    .hover-social {
+      position: absolute;
+      left: 0;
+      transform: translateY(100%);
+      color: $colorAccent;
+      transition: $transition03;
+    }
+
+    &:hover .hover-social {
+      transform: translateY(0);
+    }
+  }
+
+  .contact-container {
+    @extend %flex-end;
+    font-size: $fontSize16;
+    color: $colorPrimary;
+    transform: translateX(200%);
+    animation: contact-slide 2s ease forwards;
+
+    @media only screen and (max-width: 1000px) {
+      align-items: flex-end;
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: 500px) {
+      align-items: center;
+    }
+
+    @keyframes contact-slide {
+      30% {
+        transform: translateX(-100px);
+      }
+      60% {
+        transform: translateX(100px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .contact-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      font-weight: $fontWeightRegular;
+      color: $colorPrimary;
+    }
+
+    i {
+      padding: 0 $paddingLittleSpace;
+    }
+
+    a {
+      transition: $transition03;
+      &:hover {
+        font-weight: $fontWeightSemiBold;
+        color: $colorAccent;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

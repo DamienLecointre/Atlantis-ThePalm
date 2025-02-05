@@ -389,6 +389,7 @@ a {
         -ms-flex-align: center;
             align-items: center;
     grid-template-columns: 20% 80%;
+    overflow: visible;
   }
 }
 #header-section .logo-container {
@@ -588,7 +589,7 @@ a {
     font-size: 2rem;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   #hero-section h1 {
     font-size: 1.2rem;
   }
@@ -605,7 +606,7 @@ a {
     font-size: 1.5rem;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   #hero-section h2 {
     font-size: 1rem;
   }
@@ -615,7 +616,7 @@ a {
     font-size: 0.8rem;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   #hero-section p {
     font-weight: 400;
   }
@@ -1308,7 +1309,7 @@ a {
   -webkit-transition: 2s ease-in-out;
   transition: 2s ease-in-out;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   #copyright-container .copyright-zoom-in {
     display: block;
   }
@@ -1326,7 +1327,7 @@ a {
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
   #copyright-container a {
     display: block;
     text-align: center;

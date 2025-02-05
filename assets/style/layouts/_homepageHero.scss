@@ -49,7 +49,7 @@
       font-size: $fontSize32;
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 420px) {
       font-size: $fontSize19;
     }
   }
@@ -65,7 +65,7 @@
       font-size: $fontSize24;
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 420px) {
       font-size: $fontSize16;
     }
   }
@@ -75,7 +75,7 @@
       font-size: $fontSize12;
     }
 
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 420px) {
       font-weight: $fontWeightRegular;
     }
   }
